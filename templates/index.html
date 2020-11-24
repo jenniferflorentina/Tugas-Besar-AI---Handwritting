@@ -93,6 +93,8 @@
     //clear
     function clear(){
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      var myobj = document.getElementById("pie_hasil");
+      myobj.remove();
     }
 
     // Stores the initial position of the cursor
@@ -167,6 +169,7 @@
 				data: "hello",
 				success: function(data){
 					var im = document.createElement('img');
+					im.id="pie_hasil";
 					im.src = "/pie";
 					im.style="float:right;";
 					document.getElementById('box').appendChild(im);
